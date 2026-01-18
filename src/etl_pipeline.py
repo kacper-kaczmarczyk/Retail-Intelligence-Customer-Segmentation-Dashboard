@@ -24,13 +24,10 @@ def clean_retail_data(input_file='online_retail_II.xlsx', output_file='processed
 
     # 1. Load Data
     print(f"📥 Loading data from {input_file} (this might take a moment)...")
-    if input_file.endswith('.xlsx'):
-        df = pd.read_excel(input_file)
-    else:
-        df = pd.read_csv(input_file, encoding='ISO-8859-1')
+    df = pd.read_csv(input_file, encoding='ISO-8859-1')
 
     initial_shape = df.shape
-    print(f"   Raw data shape: {initial_shape}")
+    print(f"Raw data shape: {initial_shape}")
 
     # 2. Data Cleaning
     print("🧹 Cleaning data...")
@@ -50,9 +47,6 @@ def clean_retail_data(input_file='online_retail_II.xlsx', output_file='processed
 
     # 3. Handling Cancellations
     # In this dataset, cancellations usually have 'C' in InvoiceNo and negative Quantity.
-    # Approach 1 (Simple): Filter them out for Sales Analysis
-    # Approach 2 (Advanced): Keep them to calculate "Return Rate". 
-    # For this dashboard, we will separate valid sales from returns.
     
     # Remove records with negative quantity that represent actual returns/errors
     # (keeping only positive sales for the main revenue dashboard)
