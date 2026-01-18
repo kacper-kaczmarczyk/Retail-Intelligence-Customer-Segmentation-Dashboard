@@ -1,6 +1,6 @@
 # 🛒 Dashboard Analityczny: Retail Intelligence i Segmentacja Klientów
 
-![Podgląd Dashboardu](Retail Analytics Dashboard.png)
+![Podgląd Dashboardu](reports/Retail%20Analytics%20Dashboard.png)
 
 ## 📌 Przegląd Projektu
 **Rola:** BI Developer / Analityk Danych  
